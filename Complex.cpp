@@ -67,6 +67,11 @@ Complex operator/(Complex& z1, Complex& z2)
 	b = z1.getImaginärteil();
 	c = z2.getRealteil();
 	d = z2.getImaginärteil();
+	
+	if (c == 0 && d == 0)
+	{
+		throw invalid_argument("Division durch 0 nicht möglich!");
+	}
 
 	double berechneter_Realteil;
 	double berechneter_Imaginärteil;
