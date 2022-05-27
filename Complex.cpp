@@ -18,7 +18,7 @@ double Complex::getRealteil()
 
 void Complex::setImaginärteil(double IT)
 {
-	double Imáginärteil = IT;
+	double Imaginärteil = IT;
 }
 double Complex::getImaginärteil()
 {
