@@ -34,3 +34,23 @@ Complex Complex::operator-(Complex& z)
 {
 	return Complex(Realteil - z.getRealteil(), Imaginärteil - z.getImaginärteil());
 }
+
+//Überladungen:
+ostream& operator<< (ostream& s, Complex& z)
+{
+	s << z.getRealteil() << (z.getImaginärteil() >= 0.0 ? "+" : " ") << z.getImaginärteil() << "i";
+	return s;
+}
+istream& operator>> (istream& s, Complex& z)
+{
+	double input;
+	cout << "Realteil der komplexen Zahl:\n";
+	s >> input;
+	z.setRealteil(input);
+
+	cout << "Imaginaerteil der komplexen Zahl:\n";
+	s >> input;
+	z.setImaginärteil(input);
+
+	return s;
+}
