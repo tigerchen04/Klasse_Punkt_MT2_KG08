@@ -54,3 +54,25 @@ istream& operator>> (istream& s, Complex& z)
 
 	return s;
 }
+
+//C.4.15.1 
+Complex operator/(Complex& z1, Complex& z2)
+{
+	double a;
+	double b;
+	double c;
+	double d;
+
+	a = z1.getRealteil();
+	b = z1.getImaginärteil();
+	c = z2.getRealteil();
+	d = z2.getImaginärteil();
+
+	double berechneter_Realteil;
+	double berechneter_Imaginärteil;
+
+	berechneter_Realteil = (a * c + b * d) / (c * c + d * d);
+	berechneter_Imaginärteil = (b * c - a * d) / (c * c + d * d);
+
+	return Complex(berechneter_Realteil, berechneter_Imaginärteil);
+}
