@@ -29,3 +29,5 @@ public:
 //Überladungen:
 ostream& operator<< (ostream& s, Complex& z);
 istream& operator>> (istream& s, Complex& z);
+
+Complex operator/ (Complex& z1, Complex& z2);
