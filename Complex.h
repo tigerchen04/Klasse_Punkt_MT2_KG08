@@ -24,3 +24,8 @@ public:
 	Complex operator+(Complex& z);
 	Complex operator-(Complex& z);
 };
+
+
+//Überladungen:
+ostream& operator<< (ostream& s, Complex& z);
+istream& operator>> (istream& s, Complex& z);
