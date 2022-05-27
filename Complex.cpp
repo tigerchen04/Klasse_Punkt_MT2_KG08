@@ -2,8 +2,8 @@
 
 Complex::Complex(double RT, double IT)
 {
-	double Realteil = RT;
-	double Imaginärteil = IT;
+	Realteil = RT;
+	Imaginärteil = IT;
 }
 
 //Stter- und Gettermethoden:
